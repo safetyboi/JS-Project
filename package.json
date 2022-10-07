@@ -1,0 +1,23 @@
+{
+  "name": "js_project",
+  "version": "1.0.0",
+  "description": "wireframe link: https://wireframe.cc/pro/pp/052961751588558",
+  "scripts": {
+    "start": "webpack --watch --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/safetyboi/Fullstack-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/safetyboi/Fullstack-Project/issues"
+  },
+  "homepage": "https://github.com/safetyboi/Fullstack-Project#readme",
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}

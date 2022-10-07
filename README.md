@@ -7,7 +7,7 @@ BACKGROUND:
 FUNCTIONALITY & MVP'S:
     In Trashpicker, users will be able to:
         -practice correctly identifying the proper disposal method for various kinds of waste
-        -hover over a specific trash icon (soiled cardboard to-go container, battery, plastic wrap, etc.) to generate four buttons corresponding to the four disposal methods this game will test knowledge of: regular waste (black), recyclable (blue), compostable (green), and special (yellow).
+        -hover over a specific trash icon (soiled cardboard to-go container, battery, plastic wrap, etc.) Hovering will generate four buttons corresponding to the four disposal methods this game will test knowledge of: regular waste (black), recyclable (blue), compostable (green), and special (yellow).
         -recieve feedback upon clicking any of these buttons ("You got it!", "Almost...") as well as a pop-up explanation of why that particular piece of trash needs to be disposed of the way it does. Educational!
         -select a button entitled "I'm Ready to Play" to leave this practice area and enter "game mode"
         -From within game mode, navigate an avatar around a bird's-eye view park landscape littered with trash that corresponds tp the examples from the practice area.
