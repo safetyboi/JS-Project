@@ -1,0 +1,20 @@
+canvas {
+    background-image: url(https://thumbs.dreamstime.com/b/site-improvement-landscape-tourist-camp-forest-top-view-vector-illustration-mountains-stones-hills-river-trees-plants-92012359.jpg);
+    background-size: cover;
+}
+
+* {
+    background-color: aquamarine;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-title {
+    size: 25;
+    color: coral;
+    font-family: chalkduster, fantasy;
+}
