@@ -13,11 +13,14 @@ function Game() {
     this.recyclingBin = new RecyclingBin(this.randomPosition())
     this.landfillBin = new LandfillBin(this.randomPosition())
     this.cautionBin = new CautionBin(this.randomPosition())
+    this.binsArray = [this.compostBin, this.recyclingBin, this.landfillBin, this.cautionBin]
 }
 
 Game.DIM_X = 500;
 Game.DIM_Y = 500;
 Game.NUM_TRASH = 10;
+Game.SPAWN_X = 480;
+Game.SPAWN_Y = 480;
 
 
 Game.prototype.create = function(){
@@ -32,8 +35,8 @@ Game.prototype.addTrash = function(){
 }
 
 Game.prototype.randomPosition = function(){
-  let x = Math.floor(Math.random() * (Game.DIM_X + 5));
-  let y = Math.floor(Math.random() * (Game.DIM_Y + 5));
+  let x = Math.floor(Math.random() * (Game.SPAWN_X + 5));
+  let y = Math.floor(Math.random() * (Game.SPAWN_Y + 5));
   return [x,y]
 }
 

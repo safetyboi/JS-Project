@@ -4,6 +4,7 @@ function TrashBin(pos) {
     this.pos = pos;
     // this.type = type
     this.contaminated = false;
+    this.contents = []
 }
 
 TrashBin.prototype.draw = function(ctx) {

@@ -5,7 +5,6 @@ const GameView = require("./game_view.js");
 
 
 
-
 window.addEventListener('DOMContentLoaded', function(){ //this should be a custom event for clicking the "Ready to Play" button
     
     const canvas = document.getElementById("game-canvas");
@@ -14,4 +13,8 @@ window.addEventListener('DOMContentLoaded', function(){ //this should be a custo
     const canvasContext = canvas.getContext("2d");
     const gameview = new GameView(canvasContext);
     gameview.start();
+
+    window.remainingTrash = gameview.game.remainingTrash;
+    window.playerPos = gameview.game.player.pos;
+    window.binsArray = gameview.game.binsArray;
 })
