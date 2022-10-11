@@ -1,16 +1,50 @@
+
+
 canvas {
-    background-image: url(https://thumbs.dreamstime.com/b/site-improvement-landscape-tourist-camp-forest-top-view-vector-illustration-mountains-stones-hills-river-trees-plants-92012359.jpg);
+    background-image: url("../src/images/park_illustration_fixed.jpeg");
     background-size: cover;
 }
+
 
 * {
     background-color: aquamarine;
 }
 
+#learning-area {
+    display: none;
+}
+
+
+
+#ready-to-play {
+    
+    color: rgb(250,152,125);
+    font-family: chalkduster, fantasy;
+    border-radius: 10px;
+    border-color: rgb(250,152,125);
+    border-style: solid;
+}
+
+#ready-to-play:hover {
+    color: rgb(108,177,250);
+    font-size: 15px;
+    border-color: rgb(108,177,250);
+    border-style: solid;
+}
+
+#end-stats {
+    color: rgb(108,177,250);
+    font-size: 25px;
+    font-family: chalkduster, fantasy;
+}
+
+
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 #main-title {
@@ -19,8 +53,45 @@ body {
     font-family: chalkduster, fantasy;
 }
 
+#back-to-practice {
+    border-radius: 10px;
+    border-style: solid;
+    border-color:rgb(250,152,125);
+    font-family: chalkduster, fantasy;
+    color: rgb(250,152,125);
+    font-size: 15px;
+}
+
+#back-to-practice:hover {
+    color: rgb(108,177,250);
+    font-size: 20px;
+    border-color: rgb(108,177,250);
+    border-style: solid;
+}
+
+#play-again {
+    border-radius: 10px;
+    border-style: solid;
+    border-color:rgb(250,152,125);
+    font-family: chalkduster, fantasy;
+    color: rgb(250,152,125);
+    font-size: 15px;
+}
+
+#play-again:hover {
+    color: rgb(108,177,250);
+    font-size: 20px;
+    border-color: rgb(108,177,250);
+    border-style: solid;
+}
+
 p {
     size: 12;
     color: rgb(250,152,125);
     font-family: chalkduster, fantasy;
 }
+
+.hidden {
+    display: none;
+}
+

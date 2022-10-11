@@ -4,6 +4,8 @@ const Util = require("./util.js");
 function CautionBin(pos) {
     this.pos = pos;
     this.color = "#FABA0F"
+    this.contents = []
+    this.src = "../src/images/park_illustration_fixed.jpeg"
 }
 
 Util.inherits(CautionBin, TrashBin);
