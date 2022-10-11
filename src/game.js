@@ -25,7 +25,7 @@ Game.SPAWN_Y = 480;
 
 const allPossibleTrash = [
   {name: "clingWrap", type: "landfillBin", look: "../src/images/clingwrap.png"},
-  ,{name: "styrofoam", type: "landfillBin", look: "../src/images/clingwrap.png"},
+  {name: "styrofoam", type: "landfillBin", look: "../src/images/clingwrap.png"},
   {name: "shinyFoodWrapper", type: "landfillBin", look: "../src/images/shiny-food-wrapper.png"},
   {name: "meatScrap", type: "landfillBin", look: "../src/images/meat-scrap.png"},
   {name: "brokenGlassAndPottery", type: "landfillBin", look: "../src/images/clingwrap.png"},
