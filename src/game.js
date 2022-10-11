@@ -36,7 +36,7 @@ const allPossibleTrash = [
   {name: "coffeeGroundsAndFilters", type: "compostBin", look: "../src/images/clingwrap.png"},
   {name: "soiledPaperAndCardboard", type: "compostBin", look: "../src/images/clingwrap.png"},
   {name: "shreddedPaperAndCardboard", type: "compostBin", look: "../src/images/clingwrap.png"},
-  {name: "batteries", type: "cautionBin", look: "../src/images/alt-battery.png"},
+  {name: "batteries", type: "cautionBin", look: "../src/images/battery.png"},
   {name: "sharps", type: "cautionBin", look: "../src/images/clingwrap.png"},
   {name: "lightBulbs", type: "cautionBin", look: "../src/images/clingwrap.png"},
   {name: "compressedGas", type: "cautionBin", look: "../src/images/clingwrap.png"},
