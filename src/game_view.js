@@ -80,7 +80,7 @@ GameView.prototype.magnify = function() {
       return //is this the proper way to exit a loop, or will it still hit the other condition at the bottom
     }
   }
-  this.magnifiedImg.src = "../src/images/magnifying-glass.png"
+  this.magnifiedImg.src = "./src/images/magnifying-glass.png"
 }
 
 
