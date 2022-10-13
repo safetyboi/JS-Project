@@ -6,7 +6,7 @@ function RecyclingBin(pos) {
     this.type ="recyclingBin"
     this.color = "#1053FA"
     this.contents = []
-    this.src = "./src/images/recycling-bin.png"
+    this.src = "images/recycling-bin.png"
 }
 
 Util.inherits(RecyclingBin, TrashBin);
