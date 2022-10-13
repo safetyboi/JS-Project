@@ -52,7 +52,7 @@ const allPossibleTrash = [
 
 
 Game.prototype.create = function(){
-  while (this.remainingTrash.length < 2){ //Game.NUM_TRASH
+  while (this.remainingTrash.length < Game.NUM_TRASH){ 
     this.addTrash();
   }
 }
