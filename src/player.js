@@ -15,7 +15,7 @@ Player.prototype.draw = function(ctx) {
 Player.prototype.isCollideWithTrash = function(trashArray) {
     for(let i = 0; i < trashArray.length; i++) {
         let trash = trashArray[i]
-        if ((this.pos[0]+15 > trash.pos[0])&&(this.pos[0]<trash.pos[0]+15)&&(this.pos[1]+15>trash.pos[1])&&(this.pos[1]<trash.pos[1]+15)){
+        if ((this.pos[0]+22 > trash.pos[0])&&(this.pos[0]<trash.pos[0]+22)&&(this.pos[1]+22>trash.pos[1])&&(this.pos[1]<trash.pos[1]+22)){
             trash.isCurrentlyHeld = true;
             return trash
         }

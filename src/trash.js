@@ -1,6 +1,7 @@
 function Trash(pos,obj) {
     this.pos = pos;
     this.obj = obj;
+    this.isCurrentlyHeld = false;
     // this.trashType = obj.trashType; eventually, we will want the Trash constructor to be able to accept an object with a 'Trashtype' property
     this.color = "#FF7B88";
     // this.isCurrentlyHeld = false;
@@ -15,22 +16,35 @@ function Trash(pos,obj) {
 //     ctx.rect(this.pos[0], this.pos[1], 15, 15); 
 //     ctx.fillStyle = this.color;
 //     ctx.fill()
+// }
 
 Trash.prototype.draw = function(ctx) {
     const img = new Image();
     // img.src = "../src/images/clingwrap.png"
     img.src = this.obj.look;
-    ctx.drawImage(img, this.pos[0], this.pos[1],15,15);
-    
+    ctx.drawImage(img, this.pos[0], this.pos[1],30,30);
+    if (this.grabbable) {
+        ctx.beginPath();
+        if (this.throwawayable) {
+            ctx.strokeStyle = "#53FFF8"
+        } else {
+            ctx.strokeStyle = "#FF7B88"
+        }
+        ctx.lineWidth = 3
+        // ctx.arc(this.pos[0] + 7.5, this.pos[1] + 7.5, 10, 0, 2*Math.PI);
+        ctx.rect(this.pos[0] - 15, this.pos[1] - 15, 60, 60)
+        ctx.stroke();
+    }  
 }
 
 //maybe we're running it on a setInterval so that it's always checking?
 Trash.prototype.isCollideWithPlayer = function(playerPos) { //this makes sense right? The trash wouldn't necessarily know the player's position, but it knows it's own position
-    if ((playerPos[0] < this.pos[0]+15) && (playerPos[0]+15 > this.pos[0]) && (playerPos[1] < this.pos[1]+15) && (playerPos[1]+15 > this.pos[1])) {
+    if ((playerPos[0] < this.pos[0]+22) && (playerPos[0]+22 > this.pos[0]) && (playerPos[1] < this.pos[1]+22) && (playerPos[1]+22 > this.pos[1])) {
         this.grabbable = true
     } else {
         this.grabbable = false
     }
+
     // if we run this on a setInterval, it should constantly update the this.grabbable attribute
     // maybe we're iterating through the array of remainingTrash on every set Interval so that we're hitting every piece of trash
 }

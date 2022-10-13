@@ -4,17 +4,132 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./dist/main.css" />
+  <link rel="stylesheet" href="dist/main.css" />
   <script type="application/javascript" src="dist/main.js"defer></script>
   <title>Trashpicker</title>
 </head>
 <body>
   <h1 id="main-title">Trashpicker </h1> 
+  <button id="how-to-play">How to Play</button>
+  <div id="instructions" class="hidden">
+    <p>Welcome to the training area! Click on the examples below to learn where each type of trash should be thrown away. Then, when you're ready to put your knowledge to the test , scroll to the bottom of the screen, and click "I'm Ready to Play".</p> 
+  </div>
+  <div id="learning-area">
+    <div class="learning-container">
+      <img src="../src/images/clingwrap.png">
+      <p>Cling Wrap</p>
+    </div>
+    <div class="learning-container">
+      <img src="../src/images/styrofoam.png">
+      <p>Styrofoam</p>
+    </div>
+    <div class="learning-container">
+      <img src="../src/images/shiny-food-wrapper.png">
+      <p>Shiny Food Wrapper</p>
+    </div>
+    <div class="learning-container">
+      <img src="../src/images/meat-scrap.png">
+      <p>Meat Scraps</p>
+    </div>
+    <div class="learning-container">
+      <img src="../src/images/broken-glass.png">
+      <p>Broken Glass</p>
+    </div>
+    <!-- <div class="learning-container">
+      <img src="../src/images/diaper.png">
+      <p>Diapers</p>
+    </div> -->
+    <div class="learning-container">
+      <img src="../src/images/teabag.png">
+      <p>Teabag</p>
+    </div>
+    <div class="learning-container">
+      <img src="../src/images/ashes.png">
+      <p>Fireplace Ashes</p>
+    </div>
+    <div class="learning-container">
+      <img src="../src/images/coffee-filter.png">
+      <p>Coffeegrounds/Filters</p>
+    </div>
+    <div class="learning-container">
+      <img src="./src/images/soiled-cardboard.png">
+      <p>Soiled Paper/Cardboard</p>
+    </div>
+    <div class="learning-container">
+      <img src="../src/images/battery.png">
+      <p>Batteries</p>
+    </div>
+    <div class="learning-container">
+      <img src="../src/images/needle.png">
+      <p>Needles</p>
+    </div>
+    <div class="learning-container">
+      <img src="./src/images/lightbulb.png">
+      <p>Lightbulbs</p>
+    </div>
+    <div class="learning-container">
+      <img src="../src/images/compressed-gas.png">
+      <p>Compressed Gas</p>
+    </div>
+    <div class="learning-container">
+      <img src="../src/images/used-electronics.png">
+      <p>Electronics</p>
+    </div>
+    <div class="learning-container">
+      <img src="../src/images/pills.png">
+      <p>Medicine</p>
+    </div>
+    <div class="learning-container">
+      <img src="../src/images/paint-can.png">
+      <p>Paint</p>
+    </div>
+    <div class="learning-container">
+      <img src="../src/images/plastic-bottle.png">
+      <p>Plastic Bottles</p>
+    </div>
+    <div class="learning-container">
+      <img src="../src/images/empty-can.png">
+      <p>Metal Containers</p>
+    </div>
+    <div class="learning-container">
+      <img src="../src/images/empty-glass-bottle.png">
+      <p>Unbroken Glass</p>
+    </div>
+    <div class="learning-container">
+      <img src="../src/images/cardboard-box.png">
+      <p>Cardboard</p>
+    </div>
+    <div class="learning-container">
+      <img src="../src/images/papers.png">
+      <p>Paper</p>
+    </div>
+  </div>
   <button type="button" id="ready-to-play"> I'm Ready to Play!</button>
-  <div id="learning-area"></div>
-  <canvas id="game-canvas" class="hidden"></canvas>
-  <div id="end-stats" class="hidden">Your Stats:</div>
-  <button type="button" class="hidden" id="play-again">Play Again!</button>
+  <!-- <p id="controls">(Hold Down Directional Keys to Move) (Hold/Release "Shift" to Pick Up/Let Go of Trash)</p> -->
+  <div id="game-screen" class="hidden"> 
+    <canvas id="game-canvas" class="hidden"></canvas>
+    <div id="search-box" class="hidden">
+      <img id="search-box-image" src="../src/images/magnifying-glass.png">
+      <div id="search-box-instructions">Walk over a piece of trash to inspect it!</div>
+    </div>
+  </div>
+  <ul id="end-stats" class="hidden">
+    <p>Your Stats:</p>
+    <ul id="compost-bin" class="hidden">
+      <img src="../src/images/new-compost-bin.png">
+    </ul>
+    <ul id="recycling-bin" class="hidden">
+      <img src="../src/images/recycling-bin.png">
+    </ul>
+    <ul id="landfill-bin" class="hidden">
+      <img src="../src/images/new-landfill-bin.png">
+    </ul>
+    <ul id="caution-bin" class="hidden">
+      <img src="../src/images/new-caution-bin.png">
+    </ul>
+  </ul>
+  
+  <!-- <button type="button" class="hidden" id="play-again">Play Again!</button> -->
   <button type="button" class="hidden" id="back-to-practice"> Back to Practice Area...</button>
 </body>
 </html>

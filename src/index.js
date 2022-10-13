@@ -12,13 +12,15 @@ window.addEventListener('DOMContentLoaded', function(){ //this should be a custo
     canvas.height = Game.DIM_Y;
     const canvasContext = canvas.getContext("2d");
     const gameview = new GameView(canvasContext);
+    const howToPlayButton = document.getElementById("how-to-play")
+    howToPlayButton.addEventListener('click', gameview.instructions.bind(gameview))
     const readyToPlayButton = document.getElementById("ready-to-play")
     readyToPlayButton.addEventListener('click', gameview.start.bind(gameview))
-    const playAgainButton = document.getElementById("play-again")
-    playAgainButton.addEventListener('click', function() {
-        gameview.replay.bind(gameview);
-        gameview.start.bind(gameview);
-    })
+    // const playAgainButton = document.getElementById("play-again")
+    // playAgainButton.addEventListener('click', function() {
+    //     gameview.replay.call(gameview);
+    //     gameview.start.call(gameview);
+    // })
     const backToPracticeButton = document.getElementById("back-to-practice")
     backToPracticeButton.addEventListener('click', gameview.reset.bind(gameview))
 

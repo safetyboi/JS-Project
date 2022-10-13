@@ -3,9 +3,10 @@ const Util = require("./util.js");
 
 function RecyclingBin(pos) {
     this.pos = pos;
+    this.type ="recyclingBin"
     this.color = "#1053FA"
     this.contents = []
-    this.src = "../src/images/park_illustration_fixed.jpeg"
+    this.src = "../src/images/recycling-bin.png"
 }
 
 Util.inherits(RecyclingBin, TrashBin);

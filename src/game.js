@@ -20,39 +20,39 @@ function Game() {
 Game.DIM_X = 500;
 Game.DIM_Y = 500;
 Game.NUM_TRASH = 10;
-Game.SPAWN_X = 480;
-Game.SPAWN_Y = 480;
+Game.SPAWN_X = 450;
+Game.SPAWN_Y = 450;
 
 const allPossibleTrash = [
-  {name: "clingWrap", type: "landfillBin", look: "../src/images/clingwrap.png"},
-  {name: "styrofoam", type: "landfillBin", look: "../src/images/clingwrap.png"},
-  {name: "shinyFoodWrapper", type: "landfillBin", look: "../src/images/shiny-food-wrapper.png"},
-  {name: "meatScrap", type: "landfillBin", look: "../src/images/meat-scrap.png"},
-  {name: "brokenGlassAndPottery", type: "landfillBin", look: "../src/images/clingwrap.png"},
-  {name: "diaper", type: "landfillBin", look: "../src/images/clingwrap.png"},
-  {name: "teabag", type: "compostBin", look: "../src/images/clingwrap.png"},
-  {name: "hairAndfur", type: "compostBin", look: "../src/images/clingwrap.png"},
-  {name: "fireplaceAshes", type: "compostBin", look: "../src/images/clingwrap.png"},
-  {name: "coffeeGroundsAndFilters", type: "compostBin", look: "../src/images/clingwrap.png"},
-  {name: "soiledPaperAndCardboard", type: "compostBin", look: "../src/images/clingwrap.png"},
-  {name: "shreddedPaperAndCardboard", type: "compostBin", look: "../src/images/clingwrap.png"},
-  {name: "batteries", type: "cautionBin", look: "../src/images/battery.png"},
-  {name: "sharps", type: "cautionBin", look: "../src/images/clingwrap.png"},
-  {name: "lightBulbs", type: "cautionBin", look: "../src/images/clingwrap.png"},
-  {name: "compressedGas", type: "cautionBin", look: "../src/images/clingwrap.png"},
-  {name: "usedElectronics", type: "cautionBin", look: "../src/images/clingwrap.png"},
-  {name: "medicine", type: "cautionBin", look: "../src/images/clingwrap.png"},
-  {name: "paint", type: "cautionBin", look: "../src/images/clingwrap.png"},
-  {name: "plasticBottles", type: "recyclingBin", look: "../src/images/clingwrap.png"},
-  {name: "metalContainers", type: "recyclingBin", look: "../src/images/clingwrap.png"},
-  {name: "unbrokenGlass", type: "recyclingBin", look: "../src/images/clingwrap.png"},
-  {name: "cardboard", type: "recyclingBin", look: "../src/images/clingwrap.png"},
-  {name: "paper", type: "recyclingBin", look: "../src/images/clingwrap.png"}
+  {name: "Cling Wrap", type: "landfillBin", look: "../src/images/clingwrap.png"},
+  {name: "Styrofoam", type: "landfillBin", look: "../src/images/styrofoam.png"},
+  {name: "Shiny Food Wrapper", type: "landfillBin", look: "../src/images/shiny-food-wrapper.png"},
+  {name: "Meat Scrap", type: "landfillBin", look: "../src/images/meat-scrap.png"},
+  {name: "Broken Glass", type: "landfillBin", look: "../src/images/broken-glass.png"},
+  // {name: "diaper", type: "landfillBin", look: "../src/images/diaper.png"},
+  {name: "Teabag", type: "compostBin", look: "../src/images/teabag.png"},
+  // {name: "hairAndfur", type: "compostBin", look: "../src/images/clingwrap.png"},
+  {name: "Fireplace Ashes", type: "compostBin", look: "../src/images/ashes.png"},
+  {name: "CoffeeGrounds/Filters", type: "compostBin", look: "../src/images/coffee-filter.png"},
+  {name: "Soiled Paper/Cardboard", type: "compostBin", look: "../src/images/soiled-cardboard.png"},
+  // {name: "shreddedPaperAndCardboard", type: "compostBin", look: "../src/images/clingwrap.png"},
+  {name: "Batteries", type: "cautionBin", look: "../src/images/battery.png"},
+  {name: "Sharps", type: "cautionBin", look: "../src/images/needle.png"},
+  {name: "LightBulbs", type: "cautionBin", look: "../src/images/lightbulb.png"},
+  {name: "Compressed Gas", type: "cautionBin", look: "../src/images/compressed-gas.png"},
+  {name: "Electronics", type: "cautionBin", look: "../src/images/used-electronics.png"},
+  {name: "Medicine", type: "cautionBin", look: "../src/images/pills.png"},
+  {name: "Paint", type: "cautionBin", look: "../src/images/paint-can.png"},
+  {name: "Plastic Bottles", type: "recyclingBin", look: "../src/images/plastic-bottle.png"},
+  {name: "Metal Containers", type: "recyclingBin", look: "../src/images/empty-can.png"},
+  {name: "Unbroken Glass", type: "recyclingBin", look: "../src/images/empty-glass-bottle.png"},
+  {name: "Cardboard", type: "recyclingBin", look: "../src/images/cardboard-box.png"},
+  {name: "Paper", type: "recyclingBin", look: "../src/images/papers.png"}
 ]
 
 
 Game.prototype.create = function(){
-  while (this.remainingTrash.length < Game.NUM_TRASH){
+  while (this.remainingTrash.length < 2){ //Game.NUM_TRASH
     this.addTrash();
   }
 }
@@ -93,9 +93,11 @@ Game.prototype.updateRemainingTrash = function() {
                 const copy = structuredClone(trash); //create a copy of the trash
                 bin.eatTrash(copy); //update the bin's .contents array to hold the copy
                 that.remainingTrash.splice(i, 1) //remove the original from the remainingTrash array, so that it no longer renders in the game.draw method
-            }
+                console.log(that.remainingTrash)
+              }
         }
     })
+  
 }
 
 
