@@ -6,7 +6,7 @@ function CautionBin(pos) {
     this.type = "cautionBin"
     this.color = "#FABA0F"
     this.contents = []
-    this.src = "./src/images/new-caution-bin.png"
+    this.src = "../src/images/new-caution-bin.png"
 }
 
 Util.inherits(CautionBin, TrashBin);

@@ -5,7 +5,7 @@ function CompostBin(pos) {
     TrashBin.call(this, pos)
     this.type = "compostBin"
     this.color = "#00614C"
-    this.src = "./src/images/new-compost-bin.png"
+    this.src = "../src/images/new-compost-bin.png"
 }
 
 Util.inherits(CompostBin, TrashBin);
