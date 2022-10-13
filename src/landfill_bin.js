@@ -6,7 +6,7 @@ function LandfillBin(pos) {
     this.type = "landfillBin"
     this.color = "#000000"
     this.contents = []
-    this.src = "../src/images/new-landfill-bin.png"
+    this.src = "./src/images/new-landfill-bin.png"
 }
 
 Util.inherits(LandfillBin, TrashBin);
