@@ -93,7 +93,6 @@ Game.prototype.updateRemainingTrash = function() {
                 const copy = structuredClone(trash); //create a copy of the trash
                 bin.eatTrash(copy); //update the bin's .contents array to hold the copy
                 that.remainingTrash.splice(i, 1) //remove the original from the remainingTrash array, so that it no longer renders in the game.draw method
-                console.log(that.remainingTrash)
               }
         }
     })
