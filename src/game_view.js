@@ -4,7 +4,7 @@ const Trash = require("./trash.js");
 function GameView(ctx) {
         this.game = new Game();
         this.intervalID = undefined;
-        this.theme = new Audio('../src/music/OHMA.wav');
+        this.theme = new Audio('./src/music/OHMA.wav');
         this.dummyTrash = new Trash()
         this.drawingContext = ctx;
         this.magnifiedImg = document.getElementById('search-box-image')
@@ -128,7 +128,7 @@ GameView.prototype.reset = function() {
 GameView.prototype.displayStats = function() {
   this.theme.pause();
   this.theme.currentTime = 0;
-  const music = new Audio('../src/music/DrumRoll.wav');
+  const music = new Audio('./src/music/DrumRoll.wav');
     music.play();
 
   const compost = document.getElementById('compost-bin');
