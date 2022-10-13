@@ -204,9 +204,11 @@ body {
     font-size: 12px;
 }
 
-// #search-box-image {
-//     margin-bottom: 25px;
-// }
+#search-box-image {
+    margin: 5px;
+    // width: 75px;
+    // height: 75px;
+}
 
 p {
     size: 12;
@@ -234,6 +236,26 @@ p {
 #end-stats p {
     text-align: center;
     color: rgb(108,177,250);
+}
+
+#compost-bin {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#recycling-bin {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#landfill-bin {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#caution-bin {
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 li {

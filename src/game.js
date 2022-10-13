@@ -70,15 +70,31 @@ Game.prototype.randomPosition = function(){
 
 Game.prototype.randomObj = function(){
   // let that = this;
-  let uniqueTrash = allPossibleTrash[Math.floor(Math.random() * (allPossibleTrash.length))];
-  // if (!this.remainingTrash.includes(uniqueTrash)) { //will this work for object identity?
-  return uniqueTrash
-    
+  // debugger
+  let uniqueTrash = allPossibleTrash[Math.floor(Math.random() * allPossibleTrash.length)];
+  if (this.remainingTrash.length !== 0) {
+    // console.log(this.remainingTrash);
+    let alreadyIncluded = this.remainingTrash.some(object=>{
+      return Object.values(object.obj).includes(uniqueTrash.name)
+  })
+    if (alreadyIncluded) {
+      return this.randomObj()
+    } else {
+      return uniqueTrash
+    }
+  } else {
+      return uniqueTrash
+  }
+      
+  }
+  // if (!this.remainingTrash.includes(uniqueTrash.name)) { //will this work for object identity?
+  // return uniqueTrash
+  
   // } else {
   //   this.randomObj()
   // }
-  return uniqueTrash;
-}
+  // return uniqueTrash;
+
 
 Game.prototype.updateRemainingTrash = function() {
     // debugger
