@@ -122,8 +122,22 @@ GameView.prototype.reset = function() {
     document.getElementById("back-to-practice").classList.add('hidden');
     document.getElementById("ready-to-play").classList.remove('hidden');
     document.getElementById("how-to-play").classList.remove('hidden');
+ 
+    const compostContents = document.getElementById('compost-bin-contents');
+    const recyclingContents = document.getElementById('recycling-bin-contents');
+    const landfillContents = document.getElementById('landfill-bin-contents');
+    const cautionContents = document.getElementById('caution-bin-contents');
+    const allBins = [compostContents, recyclingContents, landfillContents, cautionContents];
 
-}
+    allBins.forEach(bin => {
+      if (bin.hasChildNodes()) {
+          while (bin.hasChildNodes()) {
+            bin.removeChild(bin.firstChild);
+          }
+      }
+    })
+
+}  
 
 GameView.prototype.displayStats = function() {
   this.theme.pause();
@@ -131,6 +145,11 @@ GameView.prototype.displayStats = function() {
   const music = new Audio('music/DrumRoll.wav');
     music.play();
 
+  const compostContents = document.getElementById('compost-bin-contents');
+  const recyclingContents = document.getElementById('recycling-bin-contents');
+  const landfillContents = document.getElementById('landfill-bin-contents');
+  const cautionContents = document.getElementById('caution-bin-contents');
+  
   const compost = document.getElementById('compost-bin');
   const recycling = document.getElementById('recycling-bin');
   const landfill = document.getElementById('landfill-bin');
@@ -141,7 +160,7 @@ GameView.prototype.displayStats = function() {
   landfill.classList.remove('hidden');
   caution.classList.remove('hidden');
 
-  const allBins = [compost, recycling, landfill, caution];
+  const allBins = [compostContents, recyclingContents, landfillContents, cautionContents];
     for(let i = 0; i<allBins.length; i++) {
       this.game.binsArray[i].contents.forEach(item=> {
         let li = document.createElement("li")
