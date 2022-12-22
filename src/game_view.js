@@ -32,6 +32,7 @@ GameView.prototype.start = function() {
     
     // clearInterval();
     // document.getElementById('game-screen').setAttribute('display','flex');
+    document.querySelector('.mute-button').style.visibility = 'visible';
     document.getElementById("how-to-play").classList.add('hidden');
     document.getElementById('instructions').classList.add('hidden');
     document.getElementById("game-canvas").classList.remove('hidden');
@@ -65,6 +66,10 @@ GameView.prototype.start = function() {
     
 }
 
+GameView.prototype.mute = function() {
+  this.theme.pause();
+}
+
 GameView.prototype.executeMoves = function() {
     
     Object.keys(this.controller).forEach(key=> {
@@ -87,6 +92,47 @@ GameView.prototype.magnify = function() {
 GameView.prototype.instructions = function() {
   document.getElementById('how-to-play').classList.add('hidden');
   document.getElementById('instructions').classList.remove('hidden');
+  document.getElementById('close-instructions').classList.remove('hidden');
+}
+
+GameView.prototype.closeInstructions = function() {
+  document.getElementById('how-to-play').classList.remove('hidden');
+  document.getElementById('instructions').classList.add('hidden');
+  document.getElementById('close-instructions').classList.add('hidden');
+}
+
+GameView.prototype.showModal = function(containerId) {
+  const modal = document.querySelector('.modal');
+  if (modal.hasChildNodes()) {
+    while (modal.hasChildNodes()) {
+      modal.removeChild(modal.firstChild);
+    }
+  }
+  const trash = this.game.allPossibleTrash;
+  for (let i=0; i < trash.length; i++) {
+    if (trash[i].cssId === containerId) {
+      let img = document.createElement('img');
+      img.src = trash[i].binLook;
+      img.classList.add('modal-image')
+      modal.append(img);
+      let p = document.createElement('p');
+      p.textContent = trash[i].blurb;
+      p.classList.add('modal-blurb');
+      modal.append(p);
+      break;
+    }
+  }
+  modal.classList.add('show');
+  const backdrop = document.querySelector('.backdrop');
+  backdrop.style.visibility = 'visible';
+  backdrop.addEventListener('click', ()=> {
+    backdrop.style.visibility = 'hidden';
+    modal.classList.remove('show');
+  }
+  )
+  //iterate through this.game.allPossibleTrash until id of div matches object cssId property
+  //then createElement, append it to the modal?
+
 }
 
 GameView.prototype.endscreen = function() {

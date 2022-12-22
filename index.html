@@ -5,33 +5,43 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="dist/main.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="path/to/dist/font-awesome/css/font-awesome.min.css"> -->
   <script type="application/javascript" src="dist/main.js"defer></script>
   <title>Trashpicker</title>
 </head>
 <body>
-  <h1 id="main-title">Trashpicker </h1> 
+  <div id="everything-except-modal">
+    <div class="title-container">
+    <div class="title-and-mute">
+      <h1 id="main-title">Trashpicker </h1> 
+      <img class="mute-button" src="images/recolored-mute-button.png"></img>
+    </div>
+  </div>
   <button id="how-to-play">How to Play</button>
   <div id="instructions" class="hidden">
-    <p>Welcome to the training area! Click on the examples below to learn where each type of trash should be thrown away. Then, when you're ready to put your knowledge to the test , scroll to the bottom of the screen, and click "I'm Ready to Play".</p> 
+    <div class="opened-instructions">
+    <p>Welcome to the training area! Click on the examples below to learn where each type of trash should be thrown away. Then, when you're ready to put your knowledge to the test , scroll to the bottom of the screen, and click "I'm Ready to Play". Controls: Hold "shift" while within range of a piece of trash to pick it up. Move with directional arrows while continuing to hold "shift" to carry the trash to the trashbin where it belongs. When you're within range of the trashbin, your cursor will glow blue! Release "shift" to throw away the trash. When all pieces of trash have been thrown away, the game is over! </p> 
+    <button id="close-instructions" class="hidden">X</button>
+  </div>
   </div>
   <div id="learning-area">
-    <div class="learning-container">
+    <div class="learning-container" id="cling-wrap">
       <img src="images/clingwrap.png">
       <p>Cling Wrap</p>
     </div>
-    <div class="learning-container">
+    <div class="learning-container" id="styrofoam">
       <img src="images/styrofoam.png">
       <p>Styrofoam</p>
     </div>
-    <div class="learning-container">
+    <div class="learning-container" id="shiny-food-wrapper">
       <img src="images/shiny-food-wrapper.png">
       <p>Shiny Food Wrapper</p>
     </div>
-    <div class="learning-container">
+    <div class="learning-container" id="meat-scrap">
       <img src="images/meat-scrap.png">
       <p>Meat Scraps</p>
     </div>
-    <div class="learning-container">
+    <div class="learning-container" id="broken-glass">
       <img src="images/broken-glass.png">
       <p>Broken Glass</p>
     </div>
@@ -39,67 +49,67 @@
       <img src=".images/diaper.png">
       <p>Diapers</p>
     </div> -->
-    <div class="learning-container">
+    <div class="learning-container" id="teabag">
       <img src="images/teabag.png">
       <p>Teabag</p>
     </div>
-    <div class="learning-container">
+    <div class="learning-container" id="fireplace-ashes">
       <img src="images/ashes.png">
       <p>Fireplace Ashes</p>
     </div>
-    <div class="learning-container">
+    <div class="learning-container" id="coffeeground-filters">
       <img src="images/coffee-filter.png">
       <p>Coffeegrounds/Filters</p>
     </div>
-    <div class="learning-container">
+    <div class="learning-container" id="soiled-paper-cardboard">
       <img src="images/soiled-cardboard.png">
       <p>Soiled Paper/Cardboard</p>
     </div>
-    <div class="learning-container">
+    <div class="learning-container" id="batteries">
       <img src="images/battery.png">
       <p>Batteries</p>
     </div>
-    <div class="learning-container">
+    <div class="learning-container" id="sharps">
       <img src="images/needle.png">
       <p>Needles</p>
     </div>
-    <div class="learning-container">
+    <div class="learning-container" id="lightbulbs">
       <img src="images/lightbulb.png">
       <p>Lightbulbs</p>
     </div>
-    <div class="learning-container">
+    <div class="learning-container" id="compressed-gas">
       <img src="images/compressed-gas.png">
       <p>Compressed Gas</p>
     </div>
-    <div class="learning-container">
+    <div class="learning-container" id="electronics">
       <img src="images/used-electronics.png">
       <p>Electronics</p>
     </div>
-    <div class="learning-container">
+    <div class="learning-container" id="medicine">
       <img src="images/pills.png">
       <p>Medicine</p>
     </div>
-    <div class="learning-container">
+    <div class="learning-container" id="paint">
       <img src="images/paint-can.png">
       <p>Paint</p>
     </div>
-    <div class="learning-container">
+    <div class="learning-container" id="plastic-bottles">
       <img src="images/plastic-bottle.png">
       <p>Plastic Bottles</p>
     </div>
-    <div class="learning-container">
+    <div class="learning-container" id="metal-containers">
       <img src="images/empty-can.png">
       <p>Metal Containers</p>
     </div>
-    <div class="learning-container">
+    <div class="learning-container" id="unbroken-glass">
       <img src="images/empty-glass-bottle.png">
       <p>Unbroken Glass</p>
     </div>
-    <div class="learning-container">
+    <div class="learning-container" id="cardboard">
       <img src="images/cardboard-box.png">
       <p>Cardboard</p>
     </div>
-    <div class="learning-container">
+    <div class="learning-container" id="paper">
       <img src="images/papers.png">
       <p>Paper</p>
     </div>
@@ -135,5 +145,9 @@
   
   <!-- <button type="button" class="hidden" id="play-again">Play Again!</button> -->
   <button type="button" class="hidden" id="back-to-practice"> Back to Practice Area...</button>
+</div>
+<div class="modal">Test
+</div>
+<div class="backdrop"></div>
 </body>
 </html>

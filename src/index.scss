@@ -10,7 +10,42 @@ canvas {
     background-color: aquamarine;
 }
 
-#instructions {
+#everything-except-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    // align-items: center;
+}
+
+.title-and-mute {
+    // margin-left: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.mute-button {
+    visibility: hidden;
+    width: 7%;
+    height: 50%;
+    color: rgb(250,152,125);
+    margin-top: 3%;
+}
+
+.mute-button:hover {
+    cursor: pointer;
+}
+
+.opened-instructions {
+    display: flex;
+    flex-direction: row;
     color: rgb(108,177,250);
     border: solid;
     border-width: 2px;
@@ -58,17 +93,18 @@ canvas {
 
 
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+// body {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+// }
 
 #main-title {
     size: 25;
     color: rgb(250,152,125);
     font-family: chalkduster, fantasy;
+    margin-left: 9%;
 }
 
 #how-to-play {
@@ -87,6 +123,24 @@ body {
     font-size: 20px;
     border-color: rgb(108,177,250);
     border-style: solid;
+}
+
+#close-instructions {
+    font-size: 30px;
+    font-family: chalkduster, fantasy;
+    color: rgb(250,152,125);
+    border-color:rgb(250,152,125);
+    border-radius: 10px;
+    border-style: solid;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 1.5%;
+}
+
+#close-instructions:hover {
+    cursor: pointer;
+    color:#f0b0da;
+    border-color: #f0b0da;
 }
 
 #back-to-practice {
@@ -151,7 +205,7 @@ body {
     width: 140px;
 }
 
-.learning-container p:hover {
+.learning-container:hover p {
     color: rgb(108,177,250);
 }
 
@@ -159,7 +213,8 @@ body {
     border-style: solid;
     border-color: rgb(108,177,250);
     border-radius: 20px;
-    border-width: 10px
+    border-width: 10px;
+    color: rgb(108,177,250);
     
 }
 
@@ -206,8 +261,9 @@ body {
 
 #search-box-image {
     margin: 5px;
-    // width: 75px;
-    // height: 75px;
+    // height: fit-content;
+    width: 145px;
+    height: 145px;
 }
 
 p {
@@ -284,3 +340,59 @@ li {
     color: rgb(11, 121, 121);
     list-style-type: "\1F44D";
 }
+
+.modal {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 25%;
+    right: 0;
+    z-index: 200;
+    width: 45%;
+    height: 45%;
+    border-radius: 15px;
+    background-color: #f297d2;
+    transform: translateX(100%); //this should keep it off-screen until the time is right
+    transition: transform 0.3s ease-out;
+}
+
+.show {
+    transform: translateX(-50%);
+} 
+
+.modal-image {
+    margin: 10%;
+    margin-left: 5%;
+    margin-right: 2%;
+    width: 50%;
+    height: auto;
+    z-index: 300;
+    background-color: #f297d2;
+}
+
+.modal-blurb {
+    background-color: rgb(1, 36, 21);
+    border-radius: 15px;
+    margin-right: 5%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 5%;
+    color: white;
+    font-family: chalkduster, fantasy;
+    font-weight: lighter;
+    font-size: 10px;
+    z-index: 300;
+}
+
+.backdrop {
+    visibility: hidden; //we'll change this in showModal
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100;
+    top: 0;
+    right: 0;
+  }
+
+  
