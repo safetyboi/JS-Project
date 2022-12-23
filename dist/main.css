@@ -119,8 +119,8 @@ canvas {
   border-color: rgb(250, 152, 125);
   border-radius: 10px;
   border-style: solid;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
   margin-left: 1.5%;
 }
 
@@ -170,7 +170,7 @@ canvas {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 500px;
+  width: 46%;
   font-family: chalkduster, fantasy;
   font-size: 10px;
   border-style: dotted;
@@ -347,11 +347,11 @@ li {
   margin-right: 5%;
   margin-top: 10%;
   margin-bottom: 10%;
-  padding: 5%;
+  padding: 8%;
   color: white;
   font-family: chalkduster, fantasy;
   font-weight: lighter;
-  font-size: 10px;
+  font-size: 14px;
   z-index: 300;
 }
 
