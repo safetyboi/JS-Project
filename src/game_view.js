@@ -139,7 +139,7 @@ GameView.prototype.endscreen = function() {
     if (this.game.gameover()) {
         
         document.getElementById("search-box").style.display = 'none';
-
+        document.querySelector('.mute-button').style.visibility = 'hidden';
         document.getElementById("game-canvas").classList.add('hidden');
         document.getElementById("main-title").classList.add('hidden');
         document.getElementById("end-stats").classList.remove('hidden');

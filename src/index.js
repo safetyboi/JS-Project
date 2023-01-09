@@ -27,7 +27,8 @@ window.addEventListener('DOMContentLoaded', function(){ //this should be a custo
     backToPracticeButton.addEventListener('click', gameview.reset.bind(gameview))
     const muteButton = document.querySelector('.mute-button');
     muteButton.addEventListener('click', gameview.mute.bind(gameview));
-    
+    // const gitHub = document.querySelector('.fa brands fa-linkedin');
+    // gitHub.addEventListener('click', this.window.location.href = "https://www.linkedin.com/in/daniel-culbertson-23bb757b/");
     
     // const playAgainButton = document.getElementById("play-again")
     // playAgainButton.addEventListener('click', function() {

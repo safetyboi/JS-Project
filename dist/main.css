@@ -365,3 +365,19 @@ li {
   top: 0;
   right: 0;
 }
+
+.link-container {
+  display: flex;
+  flex-direction: row;
+  color: rgb(250, 152, 125);
+}
+
+.link-icon {
+  margin-right: 6%;
+  margin-left: 6%;
+  color: rgb(250, 152, 125);
+}
+
+.link-icon:hover {
+  cursor: pointer;
+}
