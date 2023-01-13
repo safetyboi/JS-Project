@@ -5,6 +5,7 @@ function GameView(ctx) {
         this.game = new Game();
         this.intervalID = undefined;
         this.theme = new Audio('music/OHMA.wav');
+        this.soundOn = true;
         this.dummyTrash = new Trash()
         this.drawingContext = ctx;
         this.magnifiedImg = document.getElementById('search-box-image')
@@ -67,7 +68,20 @@ GameView.prototype.start = function() {
 }
 
 GameView.prototype.mute = function() {
-  this.theme.pause();
+  let that = this;
+  const mute = document.querySelector('.mute-button');
+  // debugger
+  if (that.soundOn) {
+    // debugger
+    mute.src = 'images/unmute-button.png';
+    that.theme.pause();
+    that.soundOn = false;
+  } else {
+    // debugger
+    mute.src = 'images/mute-button.png';
+    that.theme.play();
+    that.soundOn = true;
+  }
 }
 
 GameView.prototype.executeMoves = function() {
